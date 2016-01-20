@@ -1,0 +1,75 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace DAL_DataModel
+{
+    class CorporateBond
+    {
+        int securityId;
+        string name;
+        string bondDescription;
+        string assetType;
+        string investmentType;
+        string tradingFactor;
+        string pricingFactor;
+        string isin;
+        string bbg_Ticker;
+        string bbg_UniqueID;
+        string cusip;
+        string sedol;
+        string firstCouponDate;
+        string cap;
+        string bondFloor;
+        string couponFrequency;
+        string coupon;
+        string couponType;
+        string spread;
+        bool callableFlag;
+        bool fixToFloatFlag;
+        bool putableFlag;
+        DateTime IssueDate;
+        DateTime LastResetDate;
+        DateTime Maturity;
+        int CallNotificationMaxDays;
+        int PutNotificationMaxDays;
+        DateTime PenultimateCouponDate;
+        string ResetFrequency;
+        bool HasPosition;
+        float MacaulayDuration;
+        float Volatility_30D;
+        float Volatility_90D;
+        float Convexity;
+        float AverageVolume_30D;
+        string PF_AssetClass;
+        string PF_Country;
+        string PF_CreditRating;
+        string PF_Currency;
+        string PF_Instrument;
+        string PF_LiquidityProfile;
+        string PF_Maturity;
+        string PF_NAICS_Code;
+        string PF_Region;
+        string PF_Sector;
+        string PF_SubAssetClass;
+        string BBG_IndustryGroup;
+        string BBG_IndustrySubGroup;
+        string BBG_IndustrySector;
+        string CountryOfIssuance;
+        string IssueCurrency;
+        string Issuer;
+        string RiskCurrency;
+        DateTime PutDate;
+        DateTime PutPrice;
+        float AskPrice;
+        float HighPrice;
+        float LowPrice;
+        float OpenPrice;
+        float Volume;
+        float BidPrice;
+        float LastPrice;
+        DateTime CallDate;
+        float CallPrice;
+    }
+}
