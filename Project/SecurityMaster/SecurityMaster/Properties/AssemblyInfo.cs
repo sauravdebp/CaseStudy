@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DAL_DataModel")]
+[assembly: AssemblyTitle("SecurityMaster")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("DAL_DataModel")]
+[assembly: AssemblyProduct("SecurityMaster")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("96d35c12-374f-40b3-a2e4-8a72f9e9a8b0")]
+[assembly: Guid("1ef03683-898f-490b-9862-f552e9af875c")]
 
 // Version information for an assembly consists of the following four values:
 //

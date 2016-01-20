@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace DAL_DataModel
+namespace SecurityMaster
 {
-    public class Equity
+    class Equity
     {
-
     }
 }
