@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SecurityMaster
+namespace SecMaster_DAL
 {
     class CorporateBond
     {
@@ -120,7 +120,6 @@ namespace SecurityMaster
         }
 
         string coupon;
-
         public string Coupon
         {
             get { return coupon; }
@@ -128,7 +127,6 @@ namespace SecurityMaster
         }
 
         string couponType;
-
         public string CouponType
         {
             get { return couponType; }
@@ -136,7 +134,6 @@ namespace SecurityMaster
         }
 
         string spread;
-
         public string Spread
         {
             get { return spread; }
@@ -144,7 +141,6 @@ namespace SecurityMaster
         }
 
         bool callableFlag;
-
         public bool CallableFlag
         {
             get { return callableFlag; }
@@ -152,7 +148,6 @@ namespace SecurityMaster
         }
 
         bool fixToFloatFlag;
-
         public bool FixToFloatFlag
         {
             get { return fixToFloatFlag; }
@@ -160,7 +155,6 @@ namespace SecurityMaster
         }
 
         bool putableFlag;
-
         public bool PutableFlag
         {
             get { return putableFlag; }
@@ -168,7 +162,6 @@ namespace SecurityMaster
         }
 
         DateTime issueDate;
-
         public DateTime IssueDate
         {
             get { return issueDate; }
@@ -176,7 +169,6 @@ namespace SecurityMaster
         }
 
         DateTime lastResetDate;
-
         public DateTime LastResetDate
         {
             get { return lastResetDate; }
@@ -184,7 +176,6 @@ namespace SecurityMaster
         }
 
         DateTime maturity;
-
         public DateTime Maturity
         {
             get { return maturity; }
@@ -192,7 +183,6 @@ namespace SecurityMaster
         }
 
         int callNotificationMaxDays;
-
         public int CallNotificationMaxDays
         {
             get { return callNotificationMaxDays; }
@@ -200,7 +190,6 @@ namespace SecurityMaster
         }
 
         int putNotificationMaxDays;
-
         public int PutNotificationMaxDays
         {
             get { return putNotificationMaxDays; }
@@ -208,7 +197,6 @@ namespace SecurityMaster
         }
 
         DateTime penultimateCouponDate;
-
         public DateTime PenultimateCouponDate
         {
             get { return penultimateCouponDate; }
@@ -216,7 +204,6 @@ namespace SecurityMaster
         }
 
         string resetFrequency;
-
         public string ResetFrequency
         {
             get { return resetFrequency; }
@@ -224,7 +211,6 @@ namespace SecurityMaster
         }
 
         bool hasPosition;
-
         public bool HasPosition
         {
             get { return hasPosition; }
@@ -232,7 +218,6 @@ namespace SecurityMaster
         }
 
         float macaulayDuration;
-
         public float MacaulayDuration
         {
             get { return macaulayDuration; }
@@ -240,7 +225,6 @@ namespace SecurityMaster
         }
 
         float volatility_30D;
-
         public float Volatility_30D
         {
             get { return volatility_30D; }
@@ -248,7 +232,6 @@ namespace SecurityMaster
         }
 
         float volatility_90D;
-
         public float Volatility_90D
         {
             get { return volatility_90D; }
@@ -256,7 +239,6 @@ namespace SecurityMaster
         }
 
         float convexity;
-
         public float Convexity
         {
             get { return convexity; }
@@ -264,7 +246,6 @@ namespace SecurityMaster
         }
 
         float averageVolume_30D;
-
         public float AverageVolume_30D
         {
             get { return averageVolume_30D; }
@@ -272,7 +253,6 @@ namespace SecurityMaster
         }
 
         string pf_AssetClass;
-
         public string Pf_AssetClass
         {
             get { return pf_AssetClass; }
@@ -280,7 +260,6 @@ namespace SecurityMaster
         }
 
         string pf_Country;
-
         public string Pf_Country
         {
             get { return pf_Country; }
@@ -288,7 +267,6 @@ namespace SecurityMaster
         }
 
         string pf_CreditRating;
-
         public string Pf_CreditRating
         {
             get { return pf_CreditRating; }
@@ -296,7 +274,6 @@ namespace SecurityMaster
         }
 
         string pf_Currency;
-
         public string Pf_Currency
         {
             get { return pf_Currency; }
@@ -304,7 +281,6 @@ namespace SecurityMaster
         }
 
         string pf_Instrument;
-
         public string Pf_Instrument
         {
             get { return pf_Instrument; }
@@ -312,7 +288,6 @@ namespace SecurityMaster
         }
 
         string pf_LiquidityProfile;
-
         public string Pf_LiquidityProfile
         {
             get { return pf_LiquidityProfile; }
@@ -320,7 +295,6 @@ namespace SecurityMaster
         }
 
         string pf_Maturity;
-
         public string Pf_Maturity
         {
             get { return pf_Maturity; }
@@ -328,7 +302,6 @@ namespace SecurityMaster
         }
 
         string pf_NAICS_Code;
-
         public string Pf_NAICS_Code
         {
             get { return pf_NAICS_Code; }
@@ -336,7 +309,6 @@ namespace SecurityMaster
         }
 
         string pf_Region;
-
         public string Pf_Region
         {
             get { return pf_Region; }
@@ -344,7 +316,6 @@ namespace SecurityMaster
         }
 
         string pf_Sector;
-
         public string Pf_Sector
         {
             get { return pf_Sector; }
@@ -352,7 +323,6 @@ namespace SecurityMaster
         }
 
         string pf_SubAssetClass;
-
         public string Pf_SubAssetClass
         {
             get { return pf_SubAssetClass; }
@@ -360,7 +330,6 @@ namespace SecurityMaster
         }
 
         string bbg_IndustryGroup;
-
         public string Bbg_IndustryGroup
         {
             get { return bbg_IndustryGroup; }
@@ -368,7 +337,6 @@ namespace SecurityMaster
         }
 
         string bbg_IndustrySubGroup;
-
         public string Bbg_IndustrySubGroup
         {
             get { return bbg_IndustrySubGroup; }
@@ -376,7 +344,6 @@ namespace SecurityMaster
         }
 
         string bbg_IndustrySector;
-
         public string Bbg_IndustrySector
         {
             get { return bbg_IndustrySector; }
@@ -384,7 +351,6 @@ namespace SecurityMaster
         }
 
         string countryOfIssuance;
-
         public string CountryOfIssuance
         {
             get { return countryOfIssuance; }
@@ -392,7 +358,6 @@ namespace SecurityMaster
         }
 
         string issueCurrency;
-
         public string IssueCurrency
         {
             get { return issueCurrency; }
@@ -400,7 +365,6 @@ namespace SecurityMaster
         }
 
         string issuer;
-
         public string Issuer
         {
             get { return issuer; }
@@ -408,7 +372,6 @@ namespace SecurityMaster
         }
 
         string riskCurrency;
-
         public string RiskCurrency
         {
             get { return riskCurrency; }
@@ -416,7 +379,6 @@ namespace SecurityMaster
         }
 
         DateTime putDate;
-
         public DateTime PutDate
         {
             get { return putDate; }
@@ -424,7 +386,6 @@ namespace SecurityMaster
         }
 
         DateTime putPrice;
-
         public DateTime PutPrice
         {
             get { return putPrice; }
@@ -432,7 +393,6 @@ namespace SecurityMaster
         }
 
         float askPrice;
-
         public float AskPrice
         {
             get { return askPrice; }
@@ -440,7 +400,6 @@ namespace SecurityMaster
         }
 
         float highPrice;
-
         public float HighPrice
         {
             get { return highPrice; }
@@ -448,7 +407,6 @@ namespace SecurityMaster
         }
 
         float lowPrice;
-
         public float LowPrice
         {
             get { return lowPrice; }
@@ -456,7 +414,6 @@ namespace SecurityMaster
         }
 
         float openPrice;
-
         public float OpenPrice
         {
             get { return openPrice; }
@@ -464,7 +421,6 @@ namespace SecurityMaster
         }
 
         float volume;
-
         public float Volume
         {
             get { return volume; }
@@ -472,7 +428,6 @@ namespace SecurityMaster
         }
 
         float bidPrice;
-
         public float BidPrice
         {
             get { return bidPrice; }
@@ -480,7 +435,6 @@ namespace SecurityMaster
         }
 
         float lastPrice;
-
         public float LastPrice
         {
             get { return lastPrice; }
@@ -488,7 +442,6 @@ namespace SecurityMaster
         }
 
         DateTime callDate;
-
         public DateTime CallDate
         {
             get { return callDate; }
@@ -496,7 +449,6 @@ namespace SecurityMaster
         }
 
         float callPrice;
-
         public float CallPrice
         {
             get { return callPrice; }
