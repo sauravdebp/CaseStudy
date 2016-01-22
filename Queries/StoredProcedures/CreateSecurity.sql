@@ -26,6 +26,7 @@ BEGIN
 	SELECT @query = @query + ' CASE WHEN doc.col.value('''+ name + '[1]'', ''nvarchar(MAX)'') = '''' THEN NULL ELSE doc.col.value('''+ name + '[1]'', ''nvarchar(MAX)'') END [' + name + '], ' + CHAR(13) 
 	FROM sys.columns 
 	WHERE object_id = OBJECT_ID(@entity_name,'TABLE') AND name IN ('Name', 'Description')
+	ORDER BY sys.columns.column_id
 	
 	--The below part is specifying in the generated query to use the XML
 	SELECT @query = LEFT(@query, LEN(@query) - 3) +  ' FROM @security_data.nodes(''/Securities/Security'') doc(col); ' + CHAR(13) 
