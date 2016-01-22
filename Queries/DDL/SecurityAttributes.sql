@@ -1,7 +1,7 @@
 USE [SecurityMaster]
 GO
 
-/****** Object:  Table [dbo].[SecurityAttributes]    Script Date: 21-Jan-16 10:54:20 PM ******/
+/****** Object:  Table [dbo].[SecurityAttributes]    Script Date: 23-Jan-16 1:00:05 AM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -29,5 +29,4 @@ GO
 
 SET ANSI_PADDING OFF
 GO
-
 

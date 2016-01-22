@@ -1,7 +1,7 @@
 USE SecurityMaster
 GO
 
-ALTER PROCEDURE DeleteSecurity
+ALTER PROCEDURE SelectSecurity
 (
 	@securityTypeId INT,
 	@securityId INT
@@ -15,9 +15,9 @@ BEGIN
 	FROM SecurityType
 	WHERE SecurityTypeId = @securityTypeId
 	
-	SET @query = 'DELETE FROM ' + @entity_name + ' WHERE SecurityId = ' + CONVERT(VARCHAR(MAX), @securityId)
+	SET @query = 'SELECT * FROM ' + @entity_name + ' WHERE SecurityId = ' + CONVERT(VARCHAR(MAX), @securityId)
 
 	EXECUTE(@query)
 END
 
---EXEC DeleteSecurity 25, 1
+--EXEC SelectSecurity 1, 25
