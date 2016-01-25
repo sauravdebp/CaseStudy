@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SecMaster_DAL.DataModel
 {
-    public class Equity
+    public class Equity : Security
     {
         public int SecurityId { get; set; }
         public string Name { get; set; }
