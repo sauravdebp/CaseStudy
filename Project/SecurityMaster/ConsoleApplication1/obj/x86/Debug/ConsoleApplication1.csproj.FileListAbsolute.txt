@@ -1,0 +1,7 @@
+C:\Users\admin\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\admin\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\admin\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\bin\Debug\SecurityMaster.dll
+C:\Users\admin\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\bin\Debug\SecurityMaster.pdb
+C:\Users\admin\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.exe
+C:\Users\admin\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb

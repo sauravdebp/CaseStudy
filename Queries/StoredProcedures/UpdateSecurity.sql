@@ -16,7 +16,7 @@ BEGIN
 
 	SELECT
 		@deleteQuery = @deleteQuery + 'EXEC DeleteSecurity ' + CONVERT(VARCHAR(MAX), @securityTypeId) + ', ' + doc.col.value('SecurityId[1]', 'VARCHAR(MAX)') + ';'
-	FROM @xml.nodes('Securities/Security') doc(col)
+	FROM @xml.nodes('ArrayOfSecurity/Security') doc(col)
 	
 	EXECUTE(@deleteQuery)
 	EXEC CreateSecurity @securityTypeId, @xml
