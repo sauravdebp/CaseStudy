@@ -82,17 +82,5 @@ namespace SecMaster_DAL
             command.ExecuteNonQuery();
             return true;
         }
-
-        public Boolean DeleteSecurity(Security securityObject)
-        {
-
-            command = new SqlCommand();
-            command.Connection = conn;
-            command.CommandType = CommandType.StoredProcedure;
-            command.CommandText = "SelectSecurity";
-            command.Parameters.AddWithValue("@securityId", SqlDbType.VarChar).Value = securityObject.SecurityId;      
-            command.ExecuteNonQuery();
-            return true;
-        }
     }
 }

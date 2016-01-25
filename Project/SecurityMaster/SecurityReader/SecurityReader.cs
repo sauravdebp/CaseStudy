@@ -35,7 +35,7 @@ namespace SecurityReader
                 foreach(var d in securitiesData[securityName])
                 {
                     Security security = GetSecurityObject(securityName);
-                    //security.GetType().GetProperties()["Name"].SetValue(security, null);
+                    //security.GetType().GetProperty("sd").SetValue(security, null, null);
                 }
             }
             

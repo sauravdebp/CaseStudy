@@ -5,3 +5,10 @@ C:\Users\admin\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\bin\
 C:\Users\admin\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
 C:\Users\admin\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.exe
 C:\Users\admin\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.exe
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\bin\Debug\SecMaster_DAL.dll
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\bin\Debug\SecMaster_DAL.pdb
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache

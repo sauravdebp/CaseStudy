@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-<<<<<<< HEAD
 using System.Xml.Serialization;
 
 namespace SecMaster_DAL.DataModel
@@ -19,13 +18,3 @@ namespace SecMaster_DAL.DataModel
         public string Description { get; set; }
     }
 }
-=======
-
-namespace SecMaster_DAL.DataModel
-{
-    public class Security
-    {
-
-    }
-}
->>>>>>> d8d99c8664bc70dd201c54174935749111937d8c

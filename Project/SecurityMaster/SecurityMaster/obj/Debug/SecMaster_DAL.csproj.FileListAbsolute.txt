@@ -10,3 +10,4 @@ C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecurityMaster\bin\D
 C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecurityMaster\obj\Debug\SecurityMaster.dll
 C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecurityMaster\obj\Debug\SecurityMaster.pdb
 >>>>>>> d8d99c8664bc70dd201c54174935749111937d8c
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecurityMaster\obj\Debug\SecMaster_DAL.csprojResolveAssemblyReference.cache
