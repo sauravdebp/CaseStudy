@@ -1,7 +1,7 @@
 USE [SecurityMaster]
 GO
 
-/****** Object:  Table [dbo].[SecurityType]    Script Date: 23-Jan-16 1:00:12 AM ******/
+/****** Object:  Table [dbo].[SecurityType]    Script Date: 26-Jan-16 3:07:21 AM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -14,6 +14,7 @@ GO
 CREATE TABLE [dbo].[SecurityType](
 	[SecurityTypeId] [int] NOT NULL,
 	[SecurityTypeName] [varchar](50) NULL,
+	[SecurityClassName] [varchar](50) NULL,
 	[TableName] [varchar](50) NULL,
 	[LastModifiedBy] [varchar](50) NULL,
 	[LastModifiedOn] [datetime] NULL,
@@ -30,4 +31,5 @@ GO
 
 SET ANSI_PADDING OFF
 GO
+
 

@@ -3,7 +3,7 @@ GO
 
 ALTER PROCEDURE DeleteSecurity
 (
-	@securityTypeId INT,
+	@securityTypeName VARCHAR(MAX),
 	@securityId INT
 )
 AS
@@ -13,7 +13,7 @@ BEGIN
 
 	SELECT @entity_name = TableName
 	FROM SecurityType
-	WHERE SecurityTypeId = @securityTypeId
+	WHERE SecurityClassName = @securityTypeName
 	
 	SET @query = 'DELETE FROM ' + @entity_name + ' WHERE SecurityId = ' + CONVERT(VARCHAR(MAX), @securityId)
 

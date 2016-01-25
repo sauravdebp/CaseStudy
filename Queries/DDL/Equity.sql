@@ -1,7 +1,7 @@
 USE [SecurityMaster]
 GO
 
-/****** Object:  Table [dbo].[Equity]    Script Date: 23-Jan-16 12:59:49 AM ******/
+/****** Object:  Table [dbo].[Equity]    Script Date: 26-Jan-16 3:06:50 AM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -17,7 +17,7 @@ CREATE TABLE [dbo].[Equity](
 	[Description] [varchar](max) NULL,
 	[HasPosition] [bit] NULL,
 	[IsActiveSecurity] [bit] NULL,
-	[LotSize] [numeric](10, 0) NULL,
+	[LotSize] [varchar](max) NULL,
 	[BBG_UniqueName] [varchar](max) NULL,
 	[CUSIP] [varchar](max) NULL,
 	[ISIN] [varchar](max) NULL,
@@ -29,17 +29,17 @@ CREATE TABLE [dbo].[Equity](
 	[IsAdrFlag] [bit] NULL,
 	[AdrUnderlyingTicker] [varchar](max) NULL,
 	[AdrUnderlyingCurrency] [varchar](max) NULL,
-	[SharesPerADR] [numeric](10, 2) NULL,
+	[SharesPerADR] [varchar](max) NULL,
 	[IPODate] [datetime] NULL,
 	[PricingCurrency] [varchar](max) NULL,
-	[SettleDays] [numeric](4, 0) NULL,
-	[TotalSharesOutstanding] [numeric](17, 2) NULL,
-	[VotingRightsPerShare] [numeric](5, 0) NULL,
-	[AverageVolume_20D] [numeric](17, 2) NULL,
-	[Beta] [numeric](16, 15) NULL,
-	[ShortInterest] [numeric](17, 2) NULL,
-	[Return_YTD] [numeric](17, 2) NULL,
-	[Volatility_90D] [numeric](17, 2) NULL,
+	[SettleDays] [varchar](max) NULL,
+	[TotalSharesOutstanding] [varchar](max) NULL,
+	[VotingRightsPerShare] [varchar](max) NULL,
+	[AverageVolume_20D] [varchar](max) NULL,
+	[Beta] [varchar](max) NULL,
+	[ShortInterest] [varchar](max) NULL,
+	[Return_YTD] [varchar](max) NULL,
+	[Volatility_90D] [varchar](max) NULL,
 	[PF_AssetClass] [varchar](max) NULL,
 	[PF_Country] [varchar](max) NULL,
 	[PF_CreditRating] [varchar](max) NULL,
@@ -61,18 +61,18 @@ CREATE TABLE [dbo].[Equity](
 	[BBG_Sector] [varchar](max) NULL,
 	[CountryOfIncorporation] [varchar](max) NULL,
 	[RiskCurrency] [varchar](max) NULL,
-	[OpenPrice] [numeric](17, 2) NULL,
-	[ClosePrice] [numeric](17, 2) NULL,
-	[Volume] [numeric](17, 2) NULL,
-	[LastPrice] [numeric](17, 2) NULL,
-	[AskPrice] [numeric](17, 2) NULL,
-	[BidPrice] [numeric](17, 2) NULL,
-	[PE_Ratio] [numeric](17, 2) NULL,
+	[OpenPrice] [varchar](max) NULL,
+	[ClosePrice] [varchar](max) NULL,
+	[Volume] [varchar](max) NULL,
+	[LastPrice] [varchar](max) NULL,
+	[AskPrice] [varchar](max) NULL,
+	[BidPrice] [varchar](max) NULL,
+	[PE_Ratio] [varchar](max) NULL,
 	[DividendDeclaredDate] [datetime] NULL,
 	[DividendExDate] [datetime] NULL,
 	[DividendRecordDate] [datetime] NULL,
 	[DividendPayDate] [datetime] NULL,
-	[DividendAmount] [numeric](17, 2) NULL,
+	[DividendAmount] [varchar](max) NULL,
 	[Frequency] [varchar](max) NULL,
 	[DividendType] [varchar](max) NULL,
  CONSTRAINT [PK_Equity] PRIMARY KEY CLUSTERED 
@@ -85,4 +85,5 @@ GO
 
 SET ANSI_PADDING OFF
 GO
+
 

@@ -1,7 +1,7 @@
 USE [SecurityMaster]
 GO
 
-/****** Object:  Table [dbo].[CorporateBond]    Script Date: 23-Jan-16 12:59:39 AM ******/
+/****** Object:  Table [dbo].[CorporateBond]    Script Date: 26-Jan-16 3:06:26 AM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -17,8 +17,8 @@ CREATE TABLE [dbo].[CorporateBond](
 	[Description] [varchar](max) NULL,
 	[AssetType] [varchar](max) NULL,
 	[InvestmentType] [varchar](max) NULL,
-	[TradingFactor] [numeric](17, 2) NULL,
-	[PricingFactor] [numeric](17, 2) NULL,
+	[TradingFactor] [varchar](max) NULL,
+	[PricingFactor] [varchar](max) NULL,
 	[ISIN] [varchar](max) NULL,
 	[BBG_Ticker] [varchar](max) NULL,
 	[BBG_UniqueID] [varchar](max) NULL,
@@ -27,8 +27,8 @@ CREATE TABLE [dbo].[CorporateBond](
 	[FirstCouponDate] [datetime] NULL,
 	[Cap] [varchar](max) NULL,
 	[BondFloor] [varchar](max) NULL,
-	[CouponFrequency] [numeric](7, 2) NULL,
-	[Coupon] [numeric](17, 2) NULL,
+	[CouponFrequency] [varchar](max) NULL,
+	[Coupon] [varchar](max) NULL,
 	[CouponType] [varchar](max) NULL,
 	[Spread] [varchar](max) NULL,
 	[CallableFlag] [bit] NULL,
@@ -37,16 +37,16 @@ CREATE TABLE [dbo].[CorporateBond](
 	[IssueDate] [datetime] NULL,
 	[LastResetDate] [datetime] NULL,
 	[Maturity] [datetime] NULL,
-	[CallNotificationMaxDays] [numeric](7, 2) NULL,
-	[PutNotificationMaxDays] [numeric](7, 2) NULL,
+	[CallNotificationMaxDays] [varchar](max) NULL,
+	[PutNotificationMaxDays] [varchar](max) NULL,
 	[PenultimateCouponDate] [datetime] NULL,
 	[ResetFrequency] [varchar](max) NULL,
 	[HasPosition] [bit] NULL,
-	[MacaulayDuration] [numeric](17, 2) NULL,
-	[Volatility_30D] [numeric](17, 2) NULL,
-	[Volatility_90D] [numeric](17, 2) NULL,
-	[Convexity] [numeric](17, 2) NULL,
-	[AverageVolume_30D] [numeric](17, 2) NULL,
+	[MacaulayDuration] [varchar](max) NULL,
+	[Volatility_30D] [varchar](max) NULL,
+	[Volatility_90D] [varchar](max) NULL,
+	[Convexity] [varchar](max) NULL,
+	[AverageVolume_30D] [varchar](max) NULL,
 	[PF_AssetClass] [varchar](max) NULL,
 	[PF_Country] [varchar](max) NULL,
 	[PF_CreditRating] [varchar](max) NULL,
@@ -66,16 +66,16 @@ CREATE TABLE [dbo].[CorporateBond](
 	[Issuer] [varchar](max) NULL,
 	[RiskCurrency] [varchar](max) NULL,
 	[PutDate] [datetime] NULL,
-	[PutPrice] [numeric](17, 2) NULL,
-	[AskPrice] [numeric](17, 2) NULL,
-	[HighPrice] [numeric](17, 2) NULL,
-	[LowPrice] [numeric](17, 2) NULL,
-	[OpenPrice] [numeric](17, 2) NULL,
-	[Volume] [numeric](17, 2) NULL,
-	[BidPrice] [numeric](17, 2) NULL,
-	[LastPrice] [numeric](17, 2) NULL,
+	[PutPrice] [varchar](max) NULL,
+	[AskPrice] [varchar](max) NULL,
+	[HighPrice] [varchar](max) NULL,
+	[LowPrice] [varchar](max) NULL,
+	[OpenPrice] [varchar](max) NULL,
+	[Volume] [varchar](max) NULL,
+	[BidPrice] [varchar](max) NULL,
+	[LastPrice] [varchar](max) NULL,
 	[CallDate] [datetime] NULL,
-	[CallPrice] [numeric](17, 2) NULL,
+	[CallPrice] [varchar](max) NULL,
  CONSTRAINT [PK_CorporateBond] PRIMARY KEY CLUSTERED 
 (
 	[SecurityId] ASC
@@ -86,4 +86,5 @@ GO
 
 SET ANSI_PADDING OFF
 GO
+
 

@@ -3,7 +3,7 @@ GO
 
 ALTER PROCEDURE UpdateSecurity
 (
-	@securityTypeId INT,
+	@securityTypeName VARCHAR(MAX),
 	@xml XML
 )
 AS
@@ -15,11 +15,11 @@ BEGIN
 	SET @deleteQuery = ' '
 
 	SELECT
-		@deleteQuery = @deleteQuery + 'EXEC DeleteSecurity ' + CONVERT(VARCHAR(MAX), @securityTypeId) + ', ' + doc.col.value('SecurityId[1]', 'VARCHAR(MAX)') + ';'
+		@deleteQuery = @deleteQuery + 'EXEC DeleteSecurity ' + CONVERT(VARCHAR(MAX), @securityTypeName) + ', ' + doc.col.value('SecurityId[1]', 'VARCHAR(MAX)') + ';'
 	FROM @xml.nodes('ArrayOfSecurity/Security') doc(col)
 	
 	EXECUTE(@deleteQuery)
-	EXEC CreateSecurity @securityTypeId, @xml
+	EXEC CreateSecurity @securityTypeName, @xml
 END
 
 --DECLARE @xml XML = '
