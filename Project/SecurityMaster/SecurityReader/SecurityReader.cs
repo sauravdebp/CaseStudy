@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -31,15 +32,35 @@ namespace SecurityReader
                 securitiesData = reader.ReadFile();
                 reader.CloseFile();
 
-                //TODO: Convert the dictionary to security object
-                foreach(var d in securitiesData[securityName])
+                //Convert the complex dictionary to a list of security objects
+                Dictionary<string, string> attributeMapping = new SecMaster_DAL.DAL().GetAtrributeMappings(GetSecurityObject(securityName).GetType().Name);
+                foreach (var securityRow in securitiesData[securityName])
                 {
-                    Security security = GetSecurityObject(securityName);
-                    //security.GetType().GetProperty("sd").SetValue(security, null, null);
+                    securities.Add(FillSecurityObject(GetSecurityObject(securityName), securityRow, attributeMapping));
                 }
             }
             
             return securities;
+        }
+
+        Security FillSecurityObject(Security security, Dictionary<string, string> securityRow, Dictionary<string, string> attributeMapping)
+        {
+            foreach (var key in securityRow.Keys)
+            {
+                if (attributeMapping.Keys.Contains(key) && securityRow[key] != string.Empty)
+                {
+                    Type propertyType = security.GetType().GetProperty(attributeMapping[key]).PropertyType;
+                    //TODO: Find a way to convert the date strings from excel into SqlDateTime properly. Below statement is temporarily placed to avoid using the Date attributes.
+                    if (propertyType == typeof(SqlDateTime))
+                        continue;
+                    security.GetType().GetProperty(attributeMapping[key]).SetValue(
+                        security,
+                        Convert.ChangeType(securityRow[key], propertyType),
+                        null
+                    );
+                }
+            }
+            return security;
         }
 
         FileReader InstantiateReader(string fileExtension)

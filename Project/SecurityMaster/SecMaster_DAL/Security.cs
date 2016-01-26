@@ -20,7 +20,7 @@ namespace SecMaster_DAL.DataModel
 
         public Security()
         {
-            SecurityId = null;  //So that when XML is generated without providing value for security id it does not default to 0
+            SecurityId = null;  //So that when XML is generated without providing value for security id it does not default to 0. This is to avoid PK conflicts.
         }
     }
 }

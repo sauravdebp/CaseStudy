@@ -15,7 +15,7 @@ namespace SecMaster_DAL
     public class DAL
     {
         SqlConnection conn;
-        string ConnectionString;
+        const string ConnectionString = @"Data Source=saurav-pc\sqlexpress;Initial Catalog=SecurityMaster;Integrated Security=True";
         SqlCommand command;
     
         string CreateXML(List<Security> _equityObject)
@@ -31,10 +31,9 @@ namespace SecMaster_DAL
             }
         }
 
-        public void OpenConnection(string connectionstring)
+        public void OpenConnection()
         {
             conn = new SqlConnection();
-            ConnectionString = connectionstring;
             conn.ConnectionString = ConnectionString;
             conn.Open();
         }
@@ -65,7 +64,7 @@ namespace SecMaster_DAL
             command.CommandType = CommandType.StoredProcedure;
             command.CommandText = "UpdateSecurity";
             command.Parameters.AddWithValue("@xml", SqlDbType.Xml).Value = xml;
-            command.Parameters.AddWithValue("@securityTypeId", SqlDbType.VarChar).Value = securityList[0].GetType();
+            command.Parameters.AddWithValue("@securityTypeName", SqlDbType.VarChar).Value = securityList[0].GetType().Name;
             command.ExecuteNonQuery();
             return true;
         }
@@ -77,10 +76,32 @@ namespace SecMaster_DAL
             command.Connection = conn;
             command.CommandType = CommandType.StoredProcedure;
             command.CommandText = "DeleteSecurity";
-            command.Parameters.AddWithValue("@securityTypeId", SqlDbType.VarChar).Value = securityObject.GetType();
+            command.Parameters.AddWithValue("@securityTypeName", SqlDbType.VarChar).Value = securityObject.GetType().Name;
             command.Parameters.AddWithValue("@securityId", SqlDbType.VarChar).Value = securityObject.SecurityId;     
             command.ExecuteNonQuery();
             return true;
+        }
+
+        public Dictionary<string, string> GetAtrributeMappings(string securityClassName)
+        {
+            OpenConnection();
+            Dictionary<string, string> attributeMapping = new Dictionary<string, string>();
+            command = new SqlCommand();
+            SqlDataAdapter adapt = new SqlDataAdapter(command);
+            DataTable result = new DataTable();
+            command.Connection = conn;
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "GetSecurityAttributes";
+            command.Parameters.AddWithValue("@securityTypeName", SqlDbType.VarChar).Value = securityClassName;
+            adapt.Fill(result);
+            foreach(DataRow row in result.Rows)
+            {
+                attributeMapping.Add((string)row["AttributeDisplayName"], (string)row["AttributeRealName"]);
+            }
+            result.Dispose();
+            adapt.Dispose();
+            CloseConnection();
+            return attributeMapping;
         }
     }
 }

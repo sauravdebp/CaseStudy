@@ -14,26 +14,17 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            List<Security> equities = new List<Security>();
             DAL lib = new DAL();
-            //equities.Add(new Equity()
-            //{
-            //    Name = "MSFT",
-            //    Description = "Microsoft"
-            //});
-            //equities.Add(new Equity()
-            //{
-            //    Name = "APPL",
-            //    Description = "APPLE"
-            //});
-            equities.Add(new CorporateBond()
-            {
-                Name = "MSFTBOND"
-            });
             Console.WriteLine("STARTING....");
-            lib.OpenConnection(@"Data Source=saurav-pc\sqlexpress;Initial Catalog=SecurityMaster;Integrated Security=True");
-            lib.InsertSecurity(equities);
+
+            SecurityReader.SecurityReader reader = new SecurityReader.SecurityReader();
+            List<Security> securities = reader.ReadSecuritiesFromFile(@"C:\Users\saura_000\Downloads\Equities.xlsx");
+
+            lib.OpenConnection();
+            lib.InsertSecurity(securities);
             lib.CloseConnection();
+
+
             Console.WriteLine("DONE");
             Console.ReadKey();
         }
